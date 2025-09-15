@@ -11,14 +11,14 @@ const Header = () => {
 
   useEffect(()=>{
     const handleScroll = ()=>{
-      setScrolled(window.scrollY > 100) 
+      setScrolled(window.scrollY > 400) 
     }
     window.addEventListener('scroll', handleScroll) 
     return ()=> window.removeEventListener('scroll', handleScroll) 
   }, [])
 
   return (
-    <div className='w-full bg-black/75 z-10 fixed'> 
+    <div className={`w-full z-10 fixed transition-colors duration-500 ${scrolled ? 'bg-black/75' : 'bg-transparent'}`}> 
       <div className='w-full flex justify-between items-center px-10 py-5'> 
         
         <h1 className='text-white text-2xl story-script-regular'>Akram</h1>
@@ -43,11 +43,11 @@ const Header = () => {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className={`w-full flex flex-col md:hidden`}> 
-        <p className='text-center border-b-1 py-3 text-md text-white'>Home</p>
-        <p className='text-center border-b-1 py-3 text-md text-white'>Projects</p> 
-        <p className='text-center border-b-1 py-3 text-md text-white'>Skills</p>
-        <p className='text-center border-b-1 py-3 text-md text-white'>About</p>
-        <p className='text-center py-3 text-md text-white'>Contact Us</p>
+        <a href='#home' className='text-center border-b-1 py-3 text-md text-white'>Home</a>
+        <a href='#projects' className='text-center border-b-1 py-3 text-md text-white'>Projects</a> 
+        <a href='#skills' className='text-center border-b-1 py-3 text-md text-white'>Skills</a>
+        <a href='#about' className='text-center border-b-1 py-3 text-md text-white'>About</a>
+        <a href='' className='text-center py-3 text-md text-white'>Contact Us</a>
       </motion.div>}
 
     </div>

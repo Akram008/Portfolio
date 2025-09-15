@@ -62,7 +62,7 @@ const Projects = () => {
         <h1 className={`text-center text-gray-200 story-script-regular mt-5 text-3xl md:text-6xl tracking-widest transition-all duration-300 ${scrolled ? "opacity-100" : "opacity-0"}`}>WORK SHOWCASE</h1>
         <div className='w-full flex flex-col items-center gap-20 pt-5'> 
           {projects.map(project => (
-            <div className=' flex flex-col md:flex-row items-center gap-10 p-3 pl-5 hover:cursor-pointer border-l-1 border-gray-200'>
+            <div key={project._id} className=' flex flex-col md:flex-row items-center gap-10 p-3 pl-5 hover:cursor-pointer border-l-1 border-gray-200'>
               <img src={project.image} alt="" className='w-full sm:w-5/10 md:w-2/10 h-50 border-1 transition-all duration-300 hover:w-3/10 hover:h-60'/>
               <div className='w-full md:w-7/10 flex-col justify-between'>
                 <p className=' text-gray-200 text-3xl libertinus-sans-regular mb-10'>{project.title}</p>
