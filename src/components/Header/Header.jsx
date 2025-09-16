@@ -32,7 +32,7 @@ const Header = () => {
           <a href='#projects' className='text-white text-md'>Projects</a>
           <a href='#skills' className='text-white text-md'>Skills</a>
           <a href='#about' className='text-white text-md'>About Me</a>
-          <p className='text-white text-md'>Contact Us</p>
+          <a href='#contactUs' className='text-white text-md'>Contact Us</a>
         </div>
       </div>
 
@@ -43,11 +43,11 @@ const Header = () => {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className={`w-full flex flex-col md:hidden`}> 
-        <a href='#home' className='text-center border-b-1 py-3 text-md text-white'>Home</a>
-        <a href='#projects' className='text-center border-b-1 py-3 text-md text-white'>Projects</a> 
-        <a href='#skills' className='text-center border-b-1 py-3 text-md text-white'>Skills</a>
-        <a href='#about' className='text-center border-b-1 py-3 text-md text-white'>About</a>
-        <a href='' className='text-center py-3 text-md text-white'>Contact Us</a>
+        <a href='#home' className='text-center border-b-1 py-3 text-md text-white' onClick={()=>setIsOpen(!isOpen)}>Home</a>
+        <a href='#projects' className='text-center border-b-1 py-3 text-md text-white' onClick={()=>setIsOpen(!isOpen)}>Projects</a> 
+        <a href='#skills' className='text-center border-b-1 py-3 text-md text-white' onClick={()=>setIsOpen(!isOpen)}>Skills</a>
+        <a href='#about' className='text-center border-b-1 py-3 text-md text-white' onClick={()=>setIsOpen(!isOpen)}>About</a>
+        <a href='#contactUs' className='text-center py-3 text-md text-white' onClick={()=>setIsOpen(!isOpen)}>Contact Us</a>
       </motion.div>}
 
     </div>
